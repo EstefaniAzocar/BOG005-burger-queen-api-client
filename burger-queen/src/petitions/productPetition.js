@@ -106,6 +106,36 @@ const listOrder = async () => {
         }
     })
 }
+// const orderStatus = async(orderId) => {
+    
+//     return await axios({
+//         method: "PATCH",
+//         url:url+'orders/'+ orderId,
+//         headers: {
+//             'content-type': 'application/json',
+//             authorization: 'Bearer ' + getToken(),
+//         },
+//         data: {
+//             status: 'delivering',
+//             dateProcessed: new Date().toLocaleString('sv'),
+//         }
+//     })
+// }
+
+const orderStatusDelivered = async(orderId, token) => {
+    console.log('order id', orderId, 'token', token)
+    return await axios({
+        method: "PATCH",
+        url:url+'orders/'+ orderId,
+        headers: {
+            'content-type': 'application/json',
+            authorization: 'Bearer ' + token,
+        },
+        data: {
+            status: 'delivered',
+        }
+    })
+}
 
 // -----Peticion para eliminar ordenes -----//
 const deleteOrder = async (id)=>{
@@ -140,4 +170,5 @@ const deleteOrder = async (id)=>{
 
 
 export {listProducts, createProduct, deleteProduct, editProduct, getOnlyProduct, postOrder, listOrder, deleteOrder, editOrder}
+
 
