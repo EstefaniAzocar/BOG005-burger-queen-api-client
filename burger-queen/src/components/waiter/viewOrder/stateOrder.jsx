@@ -10,12 +10,14 @@ const StateOrder = () => {
     const { 
         listOrders,
         setListOrders,
+        orderFilter, 
+        setOrderFilter,
       } = React.useContext(BurgerContext);
 
 
     const getListOrders = () => {
+        setOrderFilter([])
         listOrder().then(res => {
-            console.log('res.data',res.data);
              setListOrders(res.data.map((order) => {
                 return {
                     client: order.client,
@@ -25,28 +27,27 @@ const StateOrder = () => {
                     status: order.status,
                     userId: order.userId,
                 }}))
-            console.log('listOrders',listOrders);
         })
     }
 
     useEffect(() => { getListOrders() } , [])
 
-    const [orderFilter, setOrderFilter] = useState([])
-    const [editStatus ,setEditStatus] = useState(false)
+    // const [orderFilter, setOrderFilter] = useState([])
+    const [editBtnStatus ,setEditBtnStatus] = useState(false)
+    // setOrderFilter([])
 
     const viewPending =()=>{
         setOrderFilter(listOrders.filter(order=> order.status === 'pending'))
-        console.log('filtrado',orderFilter);   
+        setEditBtnStatus(false)   
     }
 
     const viewToDeliver =()=>{
-        // setOrderFilter(listOrders.filter(order=> order.status === 'pending'))
-        console.log('pendiente este estado');  
-        setEditStatus(true)
+        setOrderFilter(listOrders.filter(order=> order.status === 'ready'))
+        setEditBtnStatus(true)
     }
     const viewToDelivered =()=>{
-        setOrderFilter(listOrders.filter(order=> order.status === 'delivered'))
-        console.log('filtrado',orderFilter);   
+        setOrderFilter(listOrders.filter(order=> order.status === 'delivered'))  
+        setEditBtnStatus(false)
     }
 
     return (
@@ -57,7 +58,7 @@ const StateOrder = () => {
            <button className="btnStateToDeliver" onClick={viewToDeliver}>Por Entregar</button>
            <button className="btnStateDelivered" onClick={viewToDelivered}>Entregados</button>
            </div>
-             {orderFilter.map(data => (<OrderItem key={data.id} id={data.id} client={data.client} dataEntry={data.dataEntry} products={data.products} status={data.status} userId={data.userId} editStatus={editStatus}/>))}
+             {orderFilter.map(data => (<OrderItem key={data.id} id={data.id} client={data.client} dataEntry={data.dataEntry} products={data.products} status={data.status} userId={data.userId} editBtnStatus={editBtnStatus}/>))}
         </div>
     )
 }

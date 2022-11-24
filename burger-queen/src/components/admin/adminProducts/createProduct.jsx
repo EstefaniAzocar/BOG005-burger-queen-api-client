@@ -21,7 +21,6 @@ const AddProducto = () => {
             ...newProduct,
             [e.target.name]: e.target.value
         });
-        console.log('handleChenge', newProduct);
         return newProduct
     };
     //subir imagen a la web y obtener url 
@@ -29,7 +28,6 @@ async function uploadImgWeb (img) {
 
     const form = new FormData();
     form.append('image', img);
-    console.log('img', typeof img);
 
     const apiKey = 'fc4cacd19eee783715a306dd5dc7c876'
   
@@ -41,11 +39,8 @@ async function uploadImgWeb (img) {
     }
 
     const response = await fetch(url,petition) 
-    console.log('DEVUEL ALGO', response);
     const dataResponse = await response.json()
-
-    console.log('URL IMAGEN >>>>', dataResponse.data.url )
-     return dataResponse.data.url
+    return dataResponse.data.url
 }
 
 const onChangeImg = async (e , setImgPreview) => {
@@ -53,7 +48,6 @@ const onChangeImg = async (e , setImgPreview) => {
         const fr = new FileReader()
         fr.readAsDataURL(uploadedImg)
         fr.onload = ()=> setImgPreview(fr.result)
-        console.log("QUE DEVUELVES", fr)
         return uploadedImg
   }
 
@@ -69,7 +63,6 @@ const onChangeImg = async (e , setImgPreview) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (editProductState === false) {
-            console.log('new', newProduct);
             createProduct(newProduct)
                 .then(
                     res => {
@@ -100,7 +93,6 @@ const onChangeImg = async (e , setImgPreview) => {
         // })
     }
         else if (editProductState === true) {
-            console.log('que llega',newProduct);
     editProduct(newProduct.id, newProduct)
         .then(res => {
             listProducts().then(res => {

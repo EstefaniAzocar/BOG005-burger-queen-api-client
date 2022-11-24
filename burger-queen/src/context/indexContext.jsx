@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 const BurgerContext = React.createContext();
 
 function BurgerProvider(props) {
@@ -11,20 +11,21 @@ function BurgerProvider(props) {
     email: '',
     password: '',
     role: ''
-})
-const [stateAdmin, setStateAdmin]= useState(false);
-const [products, setProducts]= useState([])
-const [editProductState, setEditProductState] = useState(false)
-const [newProduct, setnewProduct] = useState({
-  name: '',
-  price: 0,
-  image: '',
-  type:'',
-  dateEntry: new Date(),
-});
-const [cartItems, setCartItems] = useState([]);
-const [stateWaiter, setStateWaiter]= useState(true);
-const [listOrders, setListOrders]= useState([]);
+  })
+  const [stateAdmin, setStateAdmin] = useState(false);
+  const [products, setProducts] = useState([])
+  const [editProductState, setEditProductState] = useState(false)
+  const [newProduct, setnewProduct] = useState({
+    name: '',
+    price: 0,
+    image: '',
+    type: '',
+    dateEntry: new Date(),
+  });
+  const [cartItems, setCartItems] = useState([]);
+  const [stateWaiter, setStateWaiter] = useState(true);
+  const [listOrders, setListOrders] = useState([]);
+  const [orderFilter, setOrderFilter] = useState([])
 
   return (
     <BurgerContext.Provider value={{
@@ -38,18 +39,20 @@ const [listOrders, setListOrders]= useState([]);
       setDataNewUser,
       stateAdmin,
       setStateAdmin,
-      products, 
+      products,
       setProducts,
       editProductState,
       setEditProductState,
-      newProduct, 
+      newProduct,
       setnewProduct,
       cartItems,
       setCartItems,
-      stateWaiter, 
+      stateWaiter,
       setStateWaiter,
       listOrders,
       setListOrders,
+      orderFilter,
+      setOrderFilter,
     }}>
       {props.children}
     </BurgerContext.Provider>

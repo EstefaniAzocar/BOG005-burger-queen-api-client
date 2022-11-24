@@ -27,7 +27,6 @@ const FormLogin = () => {
     
     const validateUser = ()=> {
         loginUser(dataLogin).then( res => {
-            console.log('respuesta',res.data)
                 sessionStorage.setItem('user', JSON.stringify(res.data));
                 if(res.data.user.role === 'admin'){
                     navigate('/admin')
@@ -39,7 +38,6 @@ const FormLogin = () => {
             })
             .catch((error) => {
 
-                console.log("QUE ERROR DAS",error.response.data)
                 if (error.response.data === 'Email and password are required') {
                     errorMessage.innerHTML = 'Ingresa email y contraseña '
                 }
