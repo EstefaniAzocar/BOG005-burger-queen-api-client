@@ -39,10 +39,8 @@ const ProductsItem = (props) => {
     }
 
     const saveProductEdit = (e) => {
-        // console.log('estado1',users);
         setEditProductState(true)
         setOpenModal(true)
-        console.log('prop', props);
         setnewProduct({
             ...newProduct,
             name: props.name,
@@ -52,7 +50,6 @@ const ProductsItem = (props) => {
             id: props.id,
             type: props.type,
         });
-        console.log('np',newProduct);
         return newProduct
     }
 
