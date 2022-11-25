@@ -71,15 +71,15 @@ const OrderItem = (props) => {
     }
 
     return (
-        <div className="userItem_Container">
+        <div className="viewStateWaiter_Container" style={{border: props.color}}>
             <p className="client">{props.client}</p>
             <p className="status">{props.status}</p>
             <p className="dataEntry">{props.dataEntry}</p>
             <p className="totalOrder">Total: ${totalOrder}</p>
-            <div className="buttonUsers">
-                <button onClick={viewDetails}>+</button>
+            <div className="btnStateWaiter">
+                <button onClick={viewDetails} className="fa-solid fa-pen-to-square"></button>
                 <button className="fa-solid fa-trash btnDelete" onClick={deleteOrderBtn}></button>
-                {props.editBtnStatus ? <button onClick={editStatusOrder}>Entregado</button> : null}
+                {props.editBtnStatus ? <button onClick={editStatusOrder} className="fa-solid fa-check"></button> : null}
             </div>
             <div className="details">
                 {viewDetailsOrder ? props.products.map(data => (<OrderProductItem key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />)) : null}
