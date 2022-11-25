@@ -38,18 +38,21 @@ const ItemOrder = (props) => {
     }
 
     return (
-        <div>
-            <div className="userItem_Container">
-                <p className="client">{props.client}</p>
-                <p className="status">{props.status}</p>
-                <p className="dataEntry">{props.dataEntry}</p>
-                <p className="totalOrder">Total: ${totalOrder}</p>
-
+        <div className="containerItem"> 
+            <div className="containerItemUser">
+                <p className="client">Cliente: {props.client}</p>
+                <p className="status">Estado: {props.status}</p>
+                <p className="dataEntry">Hora: {props.dataEntry}</p>
+                <div className="containerDetails">
+                    <div className="numDetails">
+                        <h5>Item</h5>
+                        <h5>Cant</h5>
+                    </div>
+                    {props.products.map(data => (<ItemProductOrder key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))}
+                </div>
+                {/* <p className="totalOrder">Total: ${totalOrder}</p> */}
             </div>
             {props.editBtnStatus ? <button onClick={editStatusOrder}>Listo</button> : null}
-            <div className="details">
-                {props.products.map(data => (<ItemProductOrder key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))}
-            </div>
         </div>
 
     )
