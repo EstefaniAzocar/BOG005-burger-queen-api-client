@@ -56,22 +56,19 @@ const ItemCart = (props) => {
       <div className="dataContainer">
         <div className="left">
           <p>{props.name}</p>
-          <div className="right">
-            <div className="btnGroup">
-              <button className="btnAdd" onClick={addProduct}>
-                +
-              </button>
-              <div className="acum">{acum}</div>
-              <button className="btnRest" onClick={restProduct}>
-                -
-              </button>
-            </div>
-            <div >
-              <p>Total: $ {acum * props.price}</p>
-            </div>
-
-          </div>
         </div>
+        <div className="right">
+          <div className="btnGroup">
+            <button className="btnAdd fa-solid fa-plus" onClick={addProduct}></button>
+            <div className="acum">{acum}</div>
+            <button className="btnRest fa-solid fa-minus" onClick={restProduct}></button>
+          </div>
+          <div >
+            <p>Total: $ {acum * props.price}</p>
+          </div>
+
+        </div>
+
         {/* <div className="right">
           <div>{amount}</div>
           <p>Total: ${amount * price}</p>
