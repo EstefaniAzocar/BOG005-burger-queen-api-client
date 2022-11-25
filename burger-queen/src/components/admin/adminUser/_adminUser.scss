@@ -1,0 +1,100 @@
+.adminUser_container {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+
+    .btnAddUser {
+        background-color: $pinkButton;
+        border-radius: 50px;
+        width: 50%;
+        max-width: 300px;
+        height: 8vh;
+        font-size: 0.9rem;
+        border: solid 2px $pinkText;
+        color: $white;
+
+        &:hover {
+            background-color: $pinkText;
+            border: solid 2px $pinkButton;
+            color: $pinkButton;
+        }
+
+    }
+
+    .tableUser_container {
+        width: 90%;
+        border: 5px solid $pinkButton;
+        border-radius: 20px;
+        max-width: 800px;
+        // background-color: $pinkButton;
+        //  max-height: 300px; 
+        max-height: 350px;
+
+        .tableHeader {
+            background-color: $pinkButton;
+            padding-left: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .table {
+            max-height: 290px; 
+            overflow: auto;
+            // ::-webkit-scrollbar {display: none;}
+        }
+
+        .usuario {
+            width: 60%;
+        }
+
+        .rol {
+            width: 20%;
+        }
+    }
+
+    .tableUser_container::-webkit-scrollbar:vertical {
+        width: 5px;
+    }
+
+    .tableHeader {
+        display: flex;
+    }
+}
+
+// .nameTableUser_container{
+//     display: flex;
+//     border: 5px solid $pinkButton;
+//     border-radius: 20px;
+// }
+
+@media(min-width:768px) {
+    .adminUser_container {
+        font-size: 1.5rem;
+
+        .btnAddUser {
+            font-size: 1.3rem;
+        }
+
+        .tableUser_container {
+            max-height: 600px;
+            .table {
+                max-height: 500px; 
+                overflow: auto;
+
+            }
+
+            .table::-webkit-scrollbar {
+                display: none;}
+        }
+    }
+}
+
+@media(min-width:1024px){
+    .adminUser_container {
+        .tableUser_container {
+            max-height: 400px;
+            .table {
+                max-height: 300px; 
+            }
+        }
+    }
+} 

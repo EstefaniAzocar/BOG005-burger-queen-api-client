@@ -1,0 +1,24 @@
+.login_container {
+    background-image: url('../../img/fondoPizzara.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+
+    header {
+        img {
+            width: 20%;
+            max-width: 200px;
+        }
+    }
+}
+
+
+
+@media(min-width:768px) {
+    .login_container {
+        font-size: 1.5rem;
+        input {
+            font-size: 1.5rem;
+        }
+    }
+}

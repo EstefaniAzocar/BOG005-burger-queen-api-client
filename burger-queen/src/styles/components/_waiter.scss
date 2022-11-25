@@ -1,0 +1,20 @@
+.waiter_container{
+
+    background-image: url('../../img/fondoPizzara.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+
+    color: white;
+
+    .viewOrder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media(max-width:767px) {
+
+}

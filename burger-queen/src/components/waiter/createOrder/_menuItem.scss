@@ -1,0 +1,33 @@
+.menu_container {
+    // display: grid;
+    display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        padding: 3%;
+
+    .menuItem {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        background-color: #3A3636;
+        width: 35%;
+        max-width: 150px;
+        max-height: 200px;
+        overflow: hidden;
+        color: white;
+        border: solid 3px #FFD233;
+        // gap: 5px;
+        text-align:center;
+        margin: 20px;
+        border-radius: 10px;
+        // flex-wrap: wrap;
+
+        img {
+            height: 50%;
+        }
+    }
+
+}

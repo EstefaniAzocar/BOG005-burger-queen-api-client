@@ -1,0 +1,54 @@
+.adminUser_container {
+    .tableUser_container {
+
+        .products {
+            width: 35%;
+            // width: 50%;
+        }
+
+        .price {
+            width: 20%;
+        }
+
+        .type {
+            width: 20%;
+        }
+
+        // .actions {
+        //     width: 20%;
+        // }
+    }
+}
+
+@media(min-width:768px) {
+    .adminUser_container {
+        .tableUser_container {
+            .products {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.adminProduct_container{
+    .tableProduct_container{
+        border: 5px solid #FFD233;
+
+        .tableProductHeader{
+            background-color: #FFD233;
+            color: black;
+        }
+    }
+
+    .btnAddProduct{
+        background-color: #FFD233;
+        border: solid 2px black;
+        color: black;
+
+        &:hover {
+            background-color: #9c842e;
+            border: solid 2px #FFD233;
+            color: black;
+        }
+    }
+}

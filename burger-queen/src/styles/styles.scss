@@ -1,0 +1,40 @@
+// body {
+//     margin: 0;
+//     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//       sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//   }
+  
+//   code {
+//     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//       monospace;
+//   }
+$black: #000000;
+$pinkButton: #A81F84;
+$pinkText: #FFAFEA;
+$white: #ffffff;
+
+//components
+@import './components/home';
+@import './components/login';
+@import './components/admin';
+@import '../components/admin/adminUser/infoUser';
+@import '../components/admin/adminUser/adminUser';
+@import '../components/admin/adminUser/createUser';
+@import '../components/login/formLogin';
+@import '../components/header/navBar.scss';
+@import '../components/admin/adminProducts/adminProducts.scss';
+@import '../components/admin/adminProducts/infoProducts';
+@import '../components/admin/adminProducts/createProduct';
+@import './components/waiter';
+@import '../components/waiter/createOrder/cart';
+@import '../components/waiter/createOrder/itemCart';
+@import '../components/waiter/createOrder/menuItem';
+@import '../components/waiter/createOrder/viewCartDesktop';
+@import '../components/waiter/createOrder/waiterProducts';
+@import './components/chef';
+@import '../components/waiter/viewOrder/orderProductsItem';
+@import '../components/waiter/viewOrder/stateOrder';
+// @import '../components/waiter/waiterProducts';

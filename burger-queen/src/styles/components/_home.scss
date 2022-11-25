@@ -1,0 +1,51 @@
+.home_container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  background-color: $black;
+
+  img {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  p {
+    background-color: $pinkButton;
+    border-radius: 50px;
+    width: 40%;
+    max-width: 250px;
+    height: 8vh;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px $pinkText;
+
+    &:hover {
+      background-color: $pinkText;
+      border: solid 2px $pinkButton;
+
+      #btnLogin {
+        color: $pinkButton;
+      }
+    }
+
+    #btnLogin {
+      color: $white;
+      text-decoration: none
+    }
+  }
+
+}
+
+@media(min-width:768px) {
+  .home_container {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

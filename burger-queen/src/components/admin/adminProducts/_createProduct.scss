@@ -1,0 +1,125 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    min-width: 250px;
+    max-width: 450px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border: solid 5px #FFD233;
+    border-radius: 10px;
+    color: white;
+
+
+    h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: center;
+        color: #FFD233;
+    }
+}
+
+.form{
+    max-width: 450px;
+    min-width: 200px;
+    width: 90%;
+    border-radius: 5px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.formGroup{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    label {
+        width: 65px;
+        min-width: 65px;
+    }
+
+    input{
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        width: 50%;
+        max-width: 300px;
+    }
+}
+.btnProduct{
+     background-color: #FFD233;
+     border-radius: 50px;
+     width: 40%;
+     max-width: 250px;
+     height: 7vh;
+     font-size: 1rem;
+     border: solid 2px black;
+     color: black;
+     margin: 5px;
+
+     &:hover {
+         background-color: #9c842e ;
+         border: solid 2px black;
+         color: black;
+     }
+ }
+// .btn{
+//     background-color: #89126A;
+//     padding: 10px;
+//     display: flex;
+//     width: fit-content;
+//     align-items: center;
+//     border: none;
+//     border-radius: 5px;
+//     margin-left: 20%;
+//     cursor: pointer;    
+//     color: white;
+//     font-size: 18px;
+//     font-weight: 500;
+
+
+//     &:hover{
+//         transform: scale(1.02);
+//         background-color: white;
+//         color: #89126A;
+
+//     }
+
+
+//   }
+
+ .imgPreview{
+    width: 50px;
+    height: 50px;
+}
+
+// .formContainer{
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // align-items: center;
+//     .form {
+//         // margin-left: 20%;
+        
+//     input, select{
+//         // border-radius: 5px;
+//         // padding: 10px;
+//         // // outline: none;
+//         // border: none;
+//         width: 50%;
+//         // max-width: 300px;
+//         // font-size: 1.3rem;
+
+//     }
+//     }
+// }
