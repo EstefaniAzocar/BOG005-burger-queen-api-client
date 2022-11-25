@@ -8,7 +8,7 @@ const OrderProductItem = (props) => {
     //     setListOrders,
     // } = React.useContext(BurgerContext); 
 //    let cantidad = props.products.map(data=> data.qty)
-   console.log('probando props',props);
+   
 let total= props.qty * props.price
     return (
         <div className="orderProductItem">

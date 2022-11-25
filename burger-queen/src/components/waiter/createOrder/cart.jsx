@@ -32,7 +32,6 @@ const Cart = () => {
   }
   const creatObject = () => {
     let arrayItems = [];
-    console.log('arrayItems vacio', arrayItems)
     order.forEach((product) => {
       const acum = amountProduct.filter(element => element === product.id)
       // const oneProduct = order.filter(element => element.id === product.id)
@@ -50,7 +49,6 @@ const Cart = () => {
         }
       )
     })
-    console.log('arrayItems', arrayItems);
     return arrayItems;
   }
 
@@ -58,10 +56,8 @@ const Cart = () => {
   const sendOrder = () => {
     let idWaiter = JSON.parse(sessionStorage.getItem('user')).user.id
     let newObject = creatObject();
-    console.log('mi cliente dentro de enviar', clients)
     postOrder(newObject, idWaiter, clients)
       .then((res) => {
-        console.log('Orden creada con éxito', res);
         setOrder([])
         setClients('')
         setTotalOrder(0)

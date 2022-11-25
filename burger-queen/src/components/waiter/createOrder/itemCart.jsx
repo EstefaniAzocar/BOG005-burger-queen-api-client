@@ -38,7 +38,6 @@ const ItemCart = (props) => {
       restOneProduct.splice(myIndex, 1)
     }
     setAmountProduct(restOneProduct)
-    console.log('viendo', amountProduct);
     let repeat = [...amountProduct]
     repeat = repeat.filter(element => element === props.id);
     if (repeat.length === 1) {

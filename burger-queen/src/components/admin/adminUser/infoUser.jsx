@@ -42,7 +42,6 @@ const UserItem = (props) => {
     }
 
     const saveUserEdit = (e) => {
-        console.log('estado1',users);
         setEditUserState(true)
         setOpenModal(true)
         setDataNewUser({
