@@ -24,18 +24,18 @@ const Waiter= () => {
         <div className="waiter_container" >
              <Navbar />
             <div className="viewOrder">
-            { stateWaiter ?  
-            <React.Fragment>
-                <ProductsWaiter/>
-            {/* <button className= "fa-solid fa-cart-shopping btnCart" onClick={viewCart}></button> */}
-            {!!openModal && (
-                    <Modal>
-                        <Cart/>
-                    </Modal>
-                )}
-            <ViewCartDesktop/>
-            </React.Fragment>
-            : <StateOrder /> }
+                { stateWaiter ?  
+                <React.Fragment>
+                    <ProductsWaiter/>
+                {/* <button className= "fa-solid fa-cart-shopping btnCart" onClick={viewCart}></button> */}
+                {!!openModal && (
+                        <Modal>
+                            <Cart/>
+                        </Modal>
+                    )}
+                <ViewCartDesktop/>
+                </React.Fragment>
+                : <StateOrder /> }
             </div>
         </div>
     )
