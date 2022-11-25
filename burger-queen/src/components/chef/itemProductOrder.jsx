@@ -5,7 +5,13 @@ const ItemProductOrder = (props) => {
 let totalAcum= props.qty * props.price
     return (
         <div className="orderProductItem">
-            <p>{props.name}  cant: {props.qty} total: {totalAcum} </p>
+            <div className="productName">
+            <p >{props.name} </p>
+            </div>
+            <div className="productCant">
+            <p>{props.qty} </p>
+            </div>
+            {/* total: {totalAcum} */}
         </div>
     )
 }
