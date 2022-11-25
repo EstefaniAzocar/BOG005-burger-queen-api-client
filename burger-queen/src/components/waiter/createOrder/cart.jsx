@@ -75,7 +75,7 @@ const Cart = () => {
         <h2 className='title'>Tomar Pedido</h2>
         <section className='section'>
           <div>
-            <label>Nombre del Cliente</label>
+            <label>Nombre del Cliente:</label>
             <input
               id='orderClient'
               type='text'
@@ -84,7 +84,9 @@ const Cart = () => {
               value={clients}
               onChange={event => setClients(event.target.value)}   
             ></input>
+            <div className='productContainer'>
             {order.map(data => (<ItemCart key={data.id} id={data.id} image={data.image} name={data.name} price={data.price} type={data.type} />))}
+            </div>
             <h3>Total: $ {totalOrder}</h3>
           </div>
           <div className='container_button'>

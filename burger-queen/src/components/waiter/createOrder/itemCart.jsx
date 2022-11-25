@@ -56,19 +56,18 @@ const ItemCart = (props) => {
       <div className="dataContainer">
         <div className="left">
           <p>{props.name}</p>
-          <p>{props.price}</p>
-          <div className="buttonsItemsCart">
+          <div className="right">
             <div className="btnGroup">
               <button className="btnAdd" onClick={addProduct}>
                 +
               </button>
-              <p>{acum}</p>
+              <div className="acum">{acum}</div>
               <button className="btnRest" onClick={restProduct}>
                 -
               </button>
             </div>
-            <div cla>
-              <h3>Total: $ {acum * props.price}</h3>
+            <div >
+              <p>Total: $ {acum * props.price}</p>
             </div>
 
           </div>
