@@ -1,0 +1,36 @@
+.viewStateWaiter_Container{
+    background-color: #3A3636;
+    width: 35%;
+    max-width: 250px;
+    max-height: 500px;
+    overflow: hidden;
+    color: white;
+    border: solid 3px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.btnStateWaiter{
+    button
+        {
+            background-color: #ffffff;
+            border-radius: 50px;
+            width: 25px;
+            height: 30px;
+            font-size: 0.7rem;
+            border: solid 2px #FFAFEA;
+            color: #000000;
+            margin: 2px;
+    }
+}
+
+@media (min-width: 768px){
+    .btnStateWaiter{
+        button
+            {
+                    font-size: 1.4rem;
+                    width: 40px;
+                    height: 50px;
+            }}
+}
