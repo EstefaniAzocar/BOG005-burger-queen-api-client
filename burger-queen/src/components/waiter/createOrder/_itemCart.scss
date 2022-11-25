@@ -8,13 +8,14 @@
     padding: 0 15px;
     img{
 
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         border-radius: 5px;
     }
     .dataContainer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         height: 100%;
         padding: 15px 0;
@@ -22,6 +23,7 @@
             padding-left: 20px;
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             gap: 20px;
 
@@ -30,29 +32,36 @@
                 font-size: 16px;
             }
 
-            .buttonsItemsCart {
+            .right {
                 display: flex;
                 flex-direction: column;
-                border: none;
-                cursor: pointer;
-                font-size: 12px;
-                padding: 3px 5px;
-                border-radius: 5px;
-                font-weight: bold;
-                color: white;
+                justify-content: space-between;
+                gap: 5px;
 
                 .btnGroup{
                     display: flex;
-                    flex-direction: row;
                     justify-content: center;
-                    
-                    .btnAdd, .btnRest{
-                        height: 20px;
-                        display: flex;
-                        justify-content: center;
-                    }
+                    flex-direction: row;
+                    gap: 5px;
                 }
-
+        
+                .acum {
+                    background-color: #FFD233;
+                    color: black;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 999px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+        
+                p {
+                    font-weight: bold;
+                    flex-direction: row;
+                }
             }
         }
     }

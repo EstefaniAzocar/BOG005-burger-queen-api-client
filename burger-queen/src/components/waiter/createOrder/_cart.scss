@@ -3,8 +3,12 @@
     border-radius: 20px;
     margin: 0 20px;
     padding: 20px;
-    // width: 40%;
-    width: 80%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+  
 }
 
 .title{
@@ -12,3 +16,5 @@
     font-size: 1.5rem;
     color: #FFD233;
 }
+
+  
