@@ -1,23 +1,27 @@
-.orderProductItem{
+.orderProductItem {
     flex-direction: row;
     justify-content: space-around;
     gap: 10%;
+    position: absolute;
+    top: 0;
+    height: 75%;
+    background-color: #3A3636;
 
-    .productName{
+    .productName {
         display: flex;
         justify-content: left;
         flex-direction: column;
 
     }
 
-    .productCant{
+    .productCant {
         display: flex;
         justify-content: right;
         flex-direction: column;
     }
 }
 
-.containerItem{
+.containerItem {
     display: flex;
     flex-direction: column;
     background-color: transparent;
@@ -31,23 +35,23 @@
     margin: 20px;
     border-radius: 10px;
 
-    .containerItemUser{
+    .containerItemUser {
 
         flex-direction: column;
 
-        p{
+        p {
             margin: 0;
             padding: 0px;
         }
     }
 
-    .containerDetails{
+    .containerDetails {
         background-color: #3A3636;
         flex-direction: column;
         margin: 5px;
         padding: 10px;
 
-        .numDetails{
+        .numDetails {
             display: flex;
             flex-direction: row;
             gap: 30px;
