@@ -1,11 +1,13 @@
+
 .orderProductItem {
-    flex-direction: row;
+    // flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     gap: 10%;
-    position: absolute;
-    top: 0;
-    height: 75%;
-    background-color: #3A3636;
+    // position: absolute;
+    // top: 0;
+    // height: 75%;
+    // background-color: #3A3636;
 
     .productName {
         display: flex;
@@ -50,6 +52,7 @@
         flex-direction: column;
         margin: 5px;
         padding: 10px;
+        
 
         .numDetails {
             display: flex;
