@@ -12,7 +12,7 @@ const OrderProductItem = (props) => {
 let total= props.qty * props.price
     return (
         <div className="orderProductItem">
-            <p>{props.name}  cant: {props.qty} total: {total} </p>
+            <p>{props.name}  cant: {props.qty} total: {total}</p>
             {/* <p> cant: {props.qty}</p>
             <p> total: {total}</p> */}
         </div>
