@@ -83,7 +83,9 @@ const OrderItem = (props) => {
             </div>
             <div className="details">
                 {viewDetailsOrder ? 
-                props.products.map(data => (<OrderProductItem key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />)) : null}
+                
+                props.products.map(data => (<OrderProductItem key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))
+                : null}
             </div>
         </div>
     )
