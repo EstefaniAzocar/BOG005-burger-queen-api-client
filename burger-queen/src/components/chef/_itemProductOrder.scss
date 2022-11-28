@@ -1,21 +1,22 @@
 .orderProductItem{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     margin-left: 2px;
-
-
+ 
+ 
     .productName{
         display: flex;
         justify-content: left;
         flex-direction: column;
         width: 60%;
         padding: 5px;
-  
+ 
         gap: 10%
-
+ 
     }
-
+ 
     .productCant{
         display: flex;
         justify-content: right;

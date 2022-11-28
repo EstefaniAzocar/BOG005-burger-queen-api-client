@@ -1,16 +1,19 @@
 
-.containerStateOrder {
-    width: 100%;
-    min-height: 100vh;
-    
+// .containerStateOrder {
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     min-height: 100vh;
+   
     .containerOrder{
-
         display: flex;
         justify-content: center;
+        flex-direction: row;
         flex-wrap: wrap;
         width: 90%;
         margin: auto;
         padding: 3%;
-    
+        background-color: aqua;
+   
     }
-}
+// }
