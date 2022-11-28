@@ -60,6 +60,7 @@ const FormLogin = () => {
 
     return (
         <div className="form_container">
+            h1
             <form >
                     <label htmlFor="email">Correo:</label>
                     <input id="email" // input para el correo
