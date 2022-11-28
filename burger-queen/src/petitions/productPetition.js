@@ -117,9 +117,9 @@ const deleteOrder = async (id)=>{
             'Content-Type': 'application/json',
             authorization: 'Bearer ' + getToken(),
         },
-        data: {         
-            id: id,
-        },         
+        // data: {         
+        //     id: id,
+        // },         
     }) }
 
 // -----Peticion para editar estado de las ordenes -----//
