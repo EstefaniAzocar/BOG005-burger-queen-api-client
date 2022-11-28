@@ -9,6 +9,14 @@
     text-align: center;
     margin: 20px;
     border-radius: 10px;
+    position: relative;
+
+    .details {
+         position: absolute;
+    top: 0;
+    height: 75%;
+    background-color: #3A3636;
+    }
 }
 
 .btnStateWaiter{

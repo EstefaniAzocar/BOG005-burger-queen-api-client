@@ -1,7 +1,10 @@
 .viewCartDesktop{
-    display: flex;
-    justify-content: center;
-    width: 40%;
+    // display: flex;
+    // justify-content: center;
+    // width: 40%;
+    max-height: 600px;
+    margin-top: 100px;
+    margin-right: 2%;
 }
 @media(max-width:1023px) {
     .viewCartDesktop{
