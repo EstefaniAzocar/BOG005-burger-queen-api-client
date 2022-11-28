@@ -2,7 +2,7 @@ import React from "react";
 
 const ItemProductOrder = (props) => {
 
-let totalAcum= props.qty * props.price
+// let totalAcum= props.qty * props.price
     return (
         <div className="orderProductItem">
             <div className="productName">

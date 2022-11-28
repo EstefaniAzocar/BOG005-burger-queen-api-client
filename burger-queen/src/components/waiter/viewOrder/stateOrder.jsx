@@ -56,7 +56,6 @@ const StateOrder = () => {
 
     return (
         <div className="stateOrder_container">
-           <h1> estados de las ordenes</h1>
            <div className="btnsStates">
            <button className="btnStatePending" onClick={viewPending}>Pendientes</button>
            <button className="btnStateToDeliver" onClick={viewToDeliver}>Por Entregar</button>
