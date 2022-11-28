@@ -26,14 +26,13 @@
 .containerItem {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    width: 45%;
+    background-color: #3A3636;
+    width: 35%;
     max-width: 250px;
     max-height: 500px;
+    margin-left: 5px;
     overflow: hidden;
     color: white;
-    border: solid 3px red;
-
     margin: 20px;
     border-radius: 10px;
 
@@ -47,18 +46,38 @@
         }
     }
 
-    .containerDetails {
-        background-color: #3A3636;
+    .containerDetails{
         flex-direction: column;
-        margin: 5px;
-        padding: 10px;
+        margin: 0%;
+        width: 100%;
+        margin-bottom: 5px;
         
-
         .numDetails {
             display: flex;
             flex-direction: row;
+            margin: 0%;
             gap: 30px;
             justify-content: space-around;
+
+            .detailsItem{
+                padding: 5px;
+                margin: 0%;
+            }
         }
     }
+
+    .statusOrde{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 50px;
+        width: 35px;
+        height: 30px;
+        font-size: 0.7rem;
+        border: solid 2px #FFAFEA;
+        color: #000000;
+        margin: 5px 80px;
+    }
 }
+
