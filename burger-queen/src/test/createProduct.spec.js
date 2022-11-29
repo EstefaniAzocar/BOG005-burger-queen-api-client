@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react"
 import Login from "../view/login";
+
 // import { AddProduct } from "../components/admin/adminProducts/createProduct"
 // import axios from 'axios'
 // jest.mock ("axios", ()=> {
@@ -20,8 +21,8 @@ import Login from "../view/login";
 //     },
 //     };
 
-jest.mock("../petitions/userPetition");
-jest.mock("../petitions/productPetition");
+// jest.mock("../petitions/userPetition");
+// jest.mock("../petitions/productPetition");
 
 describe("pruebas del componente createProducts", () =>{
 
