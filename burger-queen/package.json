@@ -43,6 +43,10 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
+    "jest-dom": "^4.0.0",
+    "react-testing-library": "^8.0.1"
+=======
     "@babel/plugin-syntax-jsx": "^7.18.6",
     "@testing-library/react": "^13.4.0",
     "eslint-plugin-jest": "^27.1.6",
@@ -52,6 +56,7 @@
     "transform": {
       ".+\\.(css|scss|png|jpg|svg)$": "jest-transform-stub"
     }
+>>>>>>> d754fe305f9a087e175c1a431c2951288fe3c003
   }
 
   

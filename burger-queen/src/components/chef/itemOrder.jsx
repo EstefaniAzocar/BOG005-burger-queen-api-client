@@ -48,7 +48,9 @@ const ItemOrder = (props) => {
                         <h5 className="detailsItem">Item</h5>
                         <h5 className="detailsItem">Cant</h5>
                     </div>
+                    <div className="detailsproduct">
                     {props.products.map(data => (<ItemProductOrder key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))}
+                    </div>
                 </div>
                 {/* <p className="totalOrder">Total: ${totalOrder}</p> */}
             </div>
