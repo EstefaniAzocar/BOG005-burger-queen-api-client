@@ -15,10 +15,13 @@ const OrderState = () => {
 
       const [editBtnStatus ,setEditBtnStatus] = useState(false)
       const [stateColor, setStateColor] = useState()
-
+      const [colorClick, setColorClick] = useState({
+        c1: '',
+        c2: '',
+    })
 
     const getListOrder = () => {
-        setOrderFilter([])
+        setOrderFilter(listOrders)
         listOrder().then(res => {
              setListOrders(res.data.map((order) => {
                 return {
@@ -42,19 +45,27 @@ const OrderState = () => {
         setOrderFilter(listOrders.filter(order=> order.status === 'pending'))
         setEditBtnStatus(true)
         setStateColor('#A81F84 solid 3px') 
+        setColorClick({
+            c1: '#9c842e',
+            c2: '',
+        })
     }
 
     const viewReady =()=>{
         setOrderFilter(listOrders.filter(order=> order.status === 'ready' || order.status === 'delivered' ))
         setEditBtnStatus(false)
-        setStateColor('#1AE81A solid 3px')    
+        setStateColor('#1AE81A solid 3px')   
+        setColorClick({
+            c1: '',
+            c2: '#9c842e',
+        }) 
     }
 
     return (
         <div className="containerStateOrder">
            <div className="btnsStates">
-           <button className="btnStatePending" onClick={viewPending}>Pendientes</button>
-           <button className="btnStateDelivered btnStateReady" onClick={viewReady}>Entregados</button>
+           <button className="btnStatePending" onClick={viewPending} style={{ background: colorClick.c1 }}>Pendientes</button>
+           <button className="btnStateDelivered btnStateReady" onClick={viewReady} style={{ background: colorClick.c2 }}>Entregados</button>
            </div>
            <div className="containerOrder">
              {orderFilter.map(data => (<ItemOrder key={data.id} id={data.id} client={data.client} dataEntry={data.dataEntry} products={data.products} status={data.status} userId={data.userId} editBtnStatus={editBtnStatus} color={stateColor}/>))}

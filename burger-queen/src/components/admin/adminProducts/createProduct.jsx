@@ -1,9 +1,9 @@
 import React , {useState} from "react";
 import { createProduct, editProduct, listProducts } from "../../../petitions/productPetition";
 import { BurgerContext } from "../../../context/indexContext";
-import axios from "axios";
+// import axios from "axios";
 
-const AddProducto = () => {
+const AddProduct = () => {
     const [imgPreview, setImgPreview]= useState(null)
 
     const {
@@ -194,4 +194,4 @@ return (
     </div>
 )
 }
-export { AddProducto }
+export { AddProduct }
