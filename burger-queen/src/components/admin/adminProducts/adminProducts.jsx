@@ -4,7 +4,7 @@ import { BurgerContext } from "../../../context/indexContext.jsx";
 import { listProducts } from "../../../petitions/productPetition.js";
 // import { UserItem } from "../adminUser/infoUser.jsx";
 import { ProductsItem } from "./infoProducts.jsx";
-import { AddProducto } from "./createProduct.jsx";
+import { AddProduct } from "./createProduct.jsx";
 import { Modal } from "../../modal/modal.jsx";
 
 const AdminProducts = () => {
@@ -55,7 +55,7 @@ const AdminProducts = () => {
           
              {!!openModal && (
                     <Modal>
-                        <AddProducto/>
+                        <AddProduct/>
                     </Modal>
                 )}
 

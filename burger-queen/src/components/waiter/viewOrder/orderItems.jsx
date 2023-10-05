@@ -71,18 +71,20 @@ const OrderItem = (props) => {
     }
 
     return (
-        <div className="userItem_Container">
-            <p className="client">{props.client}</p>
-            <p className="status">{props.status}</p>
-            <p className="dataEntry">{props.dataEntry}</p>
+        <div className="viewStateWaiter_Container" style={{border: props.color}}>
+            <p className="client">Cliente: {props.client}</p>
+            <p className="status">Estado: {props.status}</p>
+            <p className="dataEntry">Fecha: {props.dataEntry}</p>
             <p className="totalOrder">Total: ${totalOrder}</p>
-            <div className="buttonUsers">
-                <button onClick={viewDetails}>+</button>
-                <button className="fa-solid fa-trash btnDelete" onClick={deleteOrderBtn}></button>
-                {props.editBtnStatus ? <button onClick={editStatusOrder}>Entregado</button> : null}
+            <div className="btnStateWaiter">
+                <button onClick={viewDetails} className="fa-solid fa-pen-to-square" style={{border: props.color}}></button>
+                <button className="fa-solid fa-trash btnDelete" onClick={deleteOrderBtn} style={{border: props.color}}></button>
+                {props.editBtnStatus ? <button onClick={editStatusOrder} className="fa-solid fa-check" style={{border: props.color}}></button> : null}
             </div>
             <div className="details">
-                {viewDetailsOrder ? props.products.map(data => (<OrderProductItem key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />)) : null}
+                {viewDetailsOrder ? 
+                props.products.map(data => (<OrderProductItem key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))
+                : null}
             </div>
         </div>
     )

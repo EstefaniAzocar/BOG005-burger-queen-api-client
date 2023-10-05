@@ -1,0 +1,26 @@
+.orderProductItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 2px;
+ 
+ 
+    .productName{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        width: 60%;
+        padding: 2px;
+        gap: 5%
+ 
+    }
+ 
+    .productCant{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-direction: column;
+        width: 40%;
+    }
+}

@@ -1,22 +1,51 @@
 .btnsStates{
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
 
 .btnStatePending, .btnStateToDeliver, .btnStateDelivered
 {
-        background-color: #FFD233;
+        background-color: transparent;
         border-radius: 10px;
         width: 40%;
         max-width: 250px;
         height: 7vh;
         font-size: 1.5rem;
         border: solid 2px #E7CD6E;
-        color: black;
+        color: white;
         margin: 5px;
         &:hover {
             background-color:#9c842e ;
             border: solid 2px  #FFD233;
         }
+}
+
+
+.order_Container
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 3%;
+} 
+
+.stateOrder_container {
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+
+
+@media(min-width:768px) {
+    .stateOrder_container {
+        font-size: 1.5rem;
+        input {
+            font-size: 1.5rem;
+        }
+    }
 }

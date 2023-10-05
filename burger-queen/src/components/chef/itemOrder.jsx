@@ -38,18 +38,23 @@ const ItemOrder = (props) => {
     }
 
     return (
-        <div>
-            <div className="userItem_Container">
-                <p className="client">{props.client}</p>
-                <p className="status">{props.status}</p>
-                <p className="dataEntry">{props.dataEntry}</p>
-                <p className="totalOrder">Total: ${totalOrder}</p>
-
+        <div className="containerItem" style={{border: props.color}}> 
+            <div className="containerItemUser">
+                <p className="client">Cliente: {props.client}</p>
+                <p className="status">Estado: {props.status}</p>
+                <p className="dataEntry">Hora: {props.dataEntry}</p>
+                <div className="containerDetails">
+                    <div className="numDetails">
+                        <h5 className="detailsItem">Item</h5>
+                        <h5 className="detailsItem">Cant</h5>
+                    </div>
+                    <div className="detailsproduct">
+                    {props.products.map(data => (<ItemProductOrder key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))}
+                    </div>
+                </div>
+                {/* <p className="totalOrder">Total: ${totalOrder}</p> */}
             </div>
-            {props.editBtnStatus ? <button onClick={editStatusOrder}>Listo</button> : null}
-            <div className="details">
-                {props.products.map(data => (<ItemProductOrder key={data.id} qty={data.qty} name={data.product.name} price={data.product.price} />))}
-            </div>
+            {props.editBtnStatus ? <button onClick={editStatusOrder} className="fa-solid fa-check statusOrde"></button> : null}
         </div>
 
     )
